@@ -43,7 +43,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## TP
 
 
-### Sign Up
+### 1 Sign Up
 Permet d'enregistrer un nouvel utilisateur sur la plateforme.
 
 
@@ -60,9 +60,9 @@ Le inputs son créés à partir du composant `nz-form-item` de la ui library [ng
 
 #### Level I
     
-1. Terminer le formulaire pour l'ajout d'un utilisateur
-2. Rendre le username et le mot de passe obligatoires
-3. En cas de succès, rediriger l'utilisateur sur /splash/login
+1. Terminer le formulaire pour l'ajout d'un utilisateur ✅
+2. Rendre le username et le mot de passe obligatoires ✅
+3. En cas de succès, rediriger l'utilisateur sur /splash/login ✅
 
 #### Level II
 
@@ -71,10 +71,10 @@ Le inputs son créés à partir du composant `nz-form-item` de la ui library [ng
     ```html
     <nz-form-control nzErrorTip="Message de validation">
     ```
-5. Vérifier si le username est disponible. Informer l'utilisateur de l'indisponibilité d'un username.
+5. Vérifier si le username est disponible. Informer l'utilisateur de l'indisponibilité d'un username. ✅
     > Utiliser le la méthode `exists` sur la classe `UserQueries`
 
-### Sign In
+### 2 Sign In
 Permet à un utilisateur de se connecter à la plateforme.
 
 Le formulaire doit contenir 2 champs : "username", "Mot de passe".
@@ -92,7 +92,7 @@ Le clic sur le bouton "Connexion" permet de soumettre le formulaire en appelant 
 5. Afficher un message si le login a échoué
     > Vous pouvez utiliser le `NzMessageService` pour afficher des messages
 
-### Room
+### 3 Room
 Une room est une salle de discussion dans laquelle les utilisateurs peuvent s'échanger des messages.
 
 Un utilisateur doit en amont avoir sélectionné une room pour pouvoir y poster du contenu.
@@ -135,7 +135,7 @@ Un utilisateur doit en amont avoir sélectionné une room pour pouvoir y poster 
 #### Level III
 6. Sélectionner par défaut la dernière room visité par l'utilisateur en stockant l'information dans le [localStorage](https://developer.mozilla.org/fr/docs/Web/API/Window/localStorage)
 
-### Post
+### 4 Post
 
 ### Level I
 1. Pouvoir rédiger et envoyer un post
@@ -161,7 +161,7 @@ Un utilisateur doit en amont avoir sélectionné une room pour pouvoir y poster 
 11. Remplacer les liens http par des balises <a>...</a>.
 12. Dans les messages, afficher les mentions `@username` en vert
 
-### User Widget 
+### 5 User Widget 
 
 ### Level I
 
@@ -169,7 +169,7 @@ Un utilisateur doit en amont avoir sélectionné une room pour pouvoir y poster 
 2. Pouvoir éditer le profile de l'utilisateur: son username et sa photo en cliquant sur le bouton dédié
 3. Pouvoir se déconnecter de l'application encliquant sur le bonton rouge de logout. Rediriger l'utilisateur vers le /splash/login
 
-### Notifications
+### 6 Notifications
 
 ### Level I
 
