@@ -32,14 +32,16 @@ export class UserRegistrationComponent implements OnInit {
 
     // TODO  Vérifier que la confirmation de mot de passe correspond au mot de passe
     if (this.form.form.invalid || this.model.password !== this.model.confirmPassword) {
+      console.error("Une erreur est survenue. Veuillez vérifier que votre mot de passe et sa confirmation sont identiques.");
       return;
     }
 
     // TODO Enregistrer l'utilisateur via le UserService
+    this.userService.register(this.model.username, this.model.password);
     this.goToLogin();
   }
 
   goToLogin() {
-    // TODO rediriger l'utilisateur sur "/splash/login"
+    this.router.navigate(["/splash/login"]);
   }
 }
