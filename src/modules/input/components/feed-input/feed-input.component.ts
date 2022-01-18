@@ -3,6 +3,7 @@ import { NzPopoverComponent, NzPopoverDirective } from 'ng-zorro-antd/popover';
 import { UserService } from 'src/modules/user/services/user.service';
 import { User } from 'src/modules/user/user.model';
 import { MessageSentEventPayload } from '../../input.model';
+import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 
 @Component({
   selector: 'app-feed-input',
@@ -33,7 +34,7 @@ export class FeedInputComponent {
   supportedTypes = "image/png,image/jpeg,image/gif,image/bmp,image/bmp,video/mpeg,audio/mpeg,audio/x-wav,image/webp";
 
   constructor(
-    private userService: UserService
+    private userService: UserService,
   ) { }
 
   /**

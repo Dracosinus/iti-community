@@ -138,10 +138,10 @@ Un utilisateur doit en amont avoir sélectionné une room pour pouvoir y poster 
 ### 4 Post
 
 ### Level I
-1. Pouvoir rédiger et envoyer un post
+1. Pouvoir rédiger et envoyer un post✅
     > `src/modules/input/components/feed-input`
 
-2. Afficher les posts reçues dans la room
+2. Afficher les posts reçues dans la room ✅
     > `src/modules/feed/components/feed`
 3. Afficher le nom de l'auteur des messages
 4. Afficher la photo de l'auteur des messages
