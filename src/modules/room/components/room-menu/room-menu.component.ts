@@ -1,3 +1,4 @@
+import { isNgTemplate } from '@angular/compiler';
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
@@ -39,6 +40,9 @@ export class RoomMenuComponent implements OnInit {
     } else {
       this.goToRoom(this.rooms[0]);
     }
+    this.roomSocketService.onNewRoom(async (room: Room)=>{
+      this.rooms = await this.queries.getAll();
+    });
   }
 
   goToRoom(room: Room) {

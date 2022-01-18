@@ -130,7 +130,7 @@ Un utilisateur doit en amont avoir sélectionné une room pour pouvoir y poster 
     > Rediriger vers la première room si il n'y a pas de roomId dans le store. 
     > Tester `this.feedStore.value.roomId`
   
-5. Ajouter les nouvelles rooms créées dynamiquement
+5. Ajouter les nouvelles rooms créées dynamiquement ✅
 
 #### Level III
 6. Sélectionner par défaut la dernière room visité par l'utilisateur en stockant l'information dans le [localStorage](https://developer.mozilla.org/fr/docs/Web/API/Window/localStorage) ✅
