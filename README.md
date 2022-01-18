@@ -100,12 +100,12 @@ Un utilisateur doit en amont avoir sélectionné une room pour pouvoir y poster 
 
 #### Level I
 
-1. Afficher la liste des rooms dans le menu
+1. Afficher la liste des rooms dans le menu ✅
     > `src/modules/room/room-menu`
 
-    > Utiliser la directive ngFor pour itérer sur les rooms et afficher leurs noms
+    > Utiliser la directive ngFor pour itérer sur les rooms et afficher leurs noms 
 
-2. Pouvoir naviguer vers room au clic dans le menu
+2. Pouvoir naviguer vers room au clic dans le menu ✅
 
 #### Level II
 
