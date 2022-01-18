@@ -71,7 +71,7 @@ Le inputs son créés à partir du composant `nz-form-item` de la ui library [ng
     ```html
     <nz-form-control nzErrorTip="Message de validation">
     ```
-5. Vérifier si le username est disponible. Informer l'utilisateur de l'indisponibilité d'un username. ✅
+5. Vérifier si le username est disponible. Informer l'utilisateur de l'indisponibilité d'un username.✅ 
     > Utiliser le la méthode `exists` sur la classe `UserQueries`
 
 ### 2 Sign In
@@ -82,9 +82,9 @@ Le clic sur le bouton "Connexion" permet de soumettre le formulaire en appelant 
 
 #### Level I
 
-1. Faire le formulaire de sign in
+1. Faire le formulaire de sign in ✅ 
 2. Rendre le username et le mot de passe obligatoires
-3. Rediriger l'utilisateur sur "/" en cas de succès
+3. Rediriger l'utilisateur sur "/" en cas de succès ✅ 
 
 #### Level II
 
