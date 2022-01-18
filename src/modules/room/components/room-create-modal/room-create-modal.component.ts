@@ -31,6 +31,7 @@ export class RoomCreateModalComponent implements OnInit {
     if (this.form.form.valid) {
       this.roomService.create(this.model.name, this.model.type);
       this.close();
+      
     }
   }
 

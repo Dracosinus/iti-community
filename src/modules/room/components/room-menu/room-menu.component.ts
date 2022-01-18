@@ -29,14 +29,20 @@ export class RoomMenuComponent implements OnInit {
 
   async ngOnInit() {
     this.rooms = await this.queries.getAll();
-    if (this.feedStore.value.roomId === undefined){
-      this.goToRoom(this.rooms[0]);
+    let lastRoomId = localStorage.getItem('lastRoomId');
+    let feedStoreId = this.feedStore.value.roomId;
+    if (lastRoomId !== undefined) {
+      this.router.navigate(["/app/"+lastRoomId]);
+    } else if (feedStoreId !== undefined){
+      localStorage.setItem('lastRoomId', feedStoreId);
+      this.router.navigate(["/app/"+feedStoreId]);
     } else {
-      this.router.navigate(["/app/"+this.feedStore.value.roomId]);
+      this.goToRoom(this.rooms[0]);
     }
   }
 
   goToRoom(room: Room) {
+    localStorage.setItem('lastRoomId', room.id);
     this.router.navigate(["/app/"+room.id]);
   }
 }
