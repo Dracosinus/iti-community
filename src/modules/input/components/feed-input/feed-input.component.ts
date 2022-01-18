@@ -128,6 +128,8 @@ export class FeedInputComponent {
     if (!this.message && !this.file) {
       return;
     }
+    this.fireMessageSent();
+    this.clear();
 
     // TODO émettre  l'évènement "messageSent" via la méthode fireMessageSent
     // TODO vider la zone de saise avec la méthode clear
@@ -145,6 +147,8 @@ export class FeedInputComponent {
    * Emit the "messageSent" event
    */
   fireMessageSent() {
+
+    this.messageSent.emit();
     // TODO émettre l'évènement "messageSent"
   }
 
