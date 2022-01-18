@@ -148,7 +148,11 @@ export class FeedInputComponent {
    */
   fireMessageSent() {
 
-    this.messageSent.emit();
+    this.messageSent.emit({
+      date: new Date(),
+      message: this.message
+      // file: this.file,
+    });
     // TODO émettre l'évènement "messageSent"
   }
 

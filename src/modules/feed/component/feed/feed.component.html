@@ -2,6 +2,6 @@
 
 <div class="feed" #feed>
   <!-- TODO itérer sur les posts en utilisant le pipe | async -->
-  <app-post *ngFor="let post of posts$ | async"></app-post>
+  <app-post *ngFor="let post of posts$ | async">{{post.message}}</app-post>
 
 </div>
