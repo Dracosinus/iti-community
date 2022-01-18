@@ -1,3 +1,4 @@
+import { isNgTemplate } from '@angular/compiler';
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
@@ -29,9 +30,23 @@ export class RoomMenuComponent implements OnInit {
 
   async ngOnInit() {
     this.rooms = await this.queries.getAll();
+    let lastRoomId = localStorage.getItem('lastRoomId');
+    let feedStoreId = this.feedStore.value.roomId;
+    if (lastRoomId !== undefined) {
+      this.router.navigate(["/app/"+lastRoomId]);
+    } else if (feedStoreId !== undefined){
+      localStorage.setItem('lastRoomId', feedStoreId);
+      this.router.navigate(["/app/"+feedStoreId]);
+    } else {
+      this.goToRoom(this.rooms[0]);
+    }
+    this.roomSocketService.onNewRoom(async (room: Room)=>{
+      this.rooms = await this.queries.getAll();
+    });
   }
 
   goToRoom(room: Room) {
+    localStorage.setItem('lastRoomId', room.id);
     this.router.navigate(["/app/"+room.id]);
   }
 }
