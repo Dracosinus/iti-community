@@ -109,7 +109,7 @@ Un utilisateur doit en amont avoir sélectionné une room pour pouvoir y poster 
 
 #### Level II
 
-3. Pouvoir ajouter une nouvelle room
+3. Pouvoir ajouter une nouvelle room ✅
     > Dans `src/modules/room/room-menu`
 
     > Appeler la méthode open du composant `app-room-create-modal` au clic du bouton "+"
