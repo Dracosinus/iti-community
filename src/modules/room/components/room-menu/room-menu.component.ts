@@ -29,6 +29,11 @@ export class RoomMenuComponent implements OnInit {
 
   async ngOnInit() {
     this.rooms = await this.queries.getAll();
+    if (this.feedStore.value.roomId === undefined){
+      this.goToRoom(this.rooms[0]);
+    } else {
+      this.router.navigate(["/app/"+this.feedStore.value.roomId]);
+    }
   }
 
   goToRoom(room: Room) {

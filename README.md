@@ -126,7 +126,7 @@ Un utilisateur doit en amont avoir sélectionné une room pour pouvoir y poster 
     ```
     > Lors de la validation du formulaire, la méthode ```onOk``` sera invoquée (tel que configuré sur le composant `nz-modal`)
 
-4. Sélectionner par défaut la première room de la liste
+4. Sélectionner par défaut la première room de la liste ✅
     > Rediriger vers la première room si il n'y a pas de roomId dans le store. 
     > Tester `this.feedStore.value.roomId`
   
