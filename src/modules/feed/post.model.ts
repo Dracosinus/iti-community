@@ -32,13 +32,6 @@ export interface MessageTextElement {
     content: string;
 }
 
-export interface MessageLinkElement {
-    type: 'link';
-    title: string;
-    image: string;
-    description: string;
-}
-
 export interface MessageYoutubeElement {
     type: 'youtube';
     videoId: string;
@@ -60,7 +53,6 @@ export interface MessageAudioElement extends MessageMediaElement<'audio'> {
 
 export type MessageElement =
     MessageTextElement |
-    MessageLinkElement |
     MessageYoutubeElement |
     MessageImageElement |
     MessageVideoElement |
