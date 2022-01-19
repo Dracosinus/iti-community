@@ -143,7 +143,7 @@ Un utilisateur doit en amont avoir sélectionné une room pour pouvoir y poster 
 
 2. Afficher les posts reçues dans la room ✅
     > `src/modules/feed/components/feed`
-3. Afficher le nom de l'auteur des messages
+3. Afficher le nom de l'auteur des messages ✅
 4. Afficher la photo de l'auteur des messages
 5. Afficher la date du post
 6. Afficher une image si le message contient une url vers une image
