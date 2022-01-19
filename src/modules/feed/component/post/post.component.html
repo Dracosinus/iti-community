@@ -2,7 +2,13 @@
   <div class="post-author-name">{{post.createdBy.username}}</div>
 
   <!-- TIPS: [ngStyle]="{'background-image': url(...) }" -->
-  <div class="post-author-photo"></div>
+  <div class="post-author-photo" [ngStyle]="{'background-image': 'url('+'post.createdBy.photoUrl'+')'}"
+  ></div>
+
+  <!-- [ngStyle]="{'background-image': url(http://pm1.narvii.com/7061/04f310ed5ad5318ea20b72e2c038396b98902cd6r1-360-573v2_00.jpg) }" -->
+  <!-- post.createdBy.photoUrl -->
+
+  
   <div class="post-date"></div>
 
   <!-- TIPS: [ngClass]="{liked: [expression booléenne]}" -->
