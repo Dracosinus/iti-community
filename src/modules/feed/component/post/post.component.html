@@ -2,14 +2,13 @@
   <div class="post-author-name">{{post.createdBy.username}}</div>
 
   <!-- TIPS: [ngStyle]="{'background-image': url(...) }" -->
-  <div class="post-author-photo" [ngStyle]="{'background-image': 'url('+'post.createdBy.photoUrl'+')'}"
-  ></div>
+  <div class="post-author-photo" [ngStyle]="{'background-image': 'url('+ post.createdBy.photoUrl +')'}" ></div>
 
   <!-- [ngStyle]="{'background-image': url(http://pm1.narvii.com/7061/04f310ed5ad5318ea20b72e2c038396b98902cd6r1-360-573v2_00.jpg) }" -->
   <!-- post.createdBy.photoUrl -->
 
   
-  <div class="post-date"></div>
+  <div class="post-date">{{post.createdAt| date:'short'}}</div>
 
   <!-- TIPS: [ngClass]="{liked: [expression booléenne]}" -->
   <div class="post-user-like">
@@ -22,8 +21,14 @@
   </p>
 
   <!-- Itérer sur les "attachements" du message -->
-  <div class="post-attachements" *ngFor="let element of post.message.attachements">
-    <!-- Utiliser ngIf pour afficher le bon composant en fonction du type d'élément-->
+  <div class="post-attachements" *ngFor="let element of post.message.attachements" >
+    <!-- Utiliser ngIf pour afficher le bon composant en fonction du type d'élément  -->
+    <app-post-attachement-image *ngIf="element.type === 'image'" [element]="element"></app-post-attachement-image>
+    <app-post-attachement-audio *ngIf="element.type === 'audio'" [element]="element"></app-post-attachement-audio>
+    <app-post-attachement-video *ngIf="element.type === 'video'" [element]="element"></app-post-attachement-video>
+    <app-post-attachement-youtube *ngIf="element.type === 'youtube'" [element]="element"></app-post-attachement-youtube>
+
+     <!-- <img *ngIf="element === image" src='http://localhost:3000/file/messages/71fccbf5-4f84-471b-955f-aba98af3bec4_78559051-5eae-4db4-9b44-b27ccd9c2a16_1642607193887.jpg'/> -->
   </div>
   <div #anchor></div>
 </div>
