@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MessageImageElement } from '../../../post.model';
+import { DomSanitizer } from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-post-attachement-image',
@@ -10,9 +12,14 @@ export class PostAttachementImageComponent implements OnInit {
   @Input()
   element: MessageImageElement;
 
-  constructor() { }
+  constructor(
+    private sanitizer: DomSanitizer
+  ) { }
 
   ngOnInit(): void {
+  }
+  get url() {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(this.element.url);
   }
 
 }
