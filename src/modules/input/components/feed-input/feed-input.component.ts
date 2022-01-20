@@ -31,7 +31,7 @@ export class FeedInputComponent {
 
   currentMention?: RegExpMatchArray;
 
-  supportedTypes = "image/png,image/jpeg,image/gif,image/bmp,image/bmp,video/mpeg,audio/mpeg,audio/x-wav,image/webp";
+  supportedTypes = "image/png,image/jpeg,image/gif,image/bmp,image/bmp,video/mpeg,video/mp4,audio/mpeg,audio/x-wav,image/webp";
 
   constructor(
     private userService: UserService,
