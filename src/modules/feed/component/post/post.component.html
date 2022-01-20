@@ -7,8 +7,8 @@
   <div class="post-date">{{post.createdAt| date:'short'}}</div>
 
   <!-- TIPS: [ngClass]="{liked: [expression booléenne]}" -->
-  <div class="post-user-like ">
-    <i nz-icon nzType="heart" [nzTheme]="post.liked? 'fill' : 'outline'" [ngClass]="{'liked': [post.liked]}" (click)="like()"></i>
+  <div class="post-user-like" [ngClass]="{liked: post.liked}">
+    <i nz-icon nzType="heart" [nzTheme]="post.liked? 'fill' : 'outline'" (click)="like()"></i>
   </div>
 
   <p class="post-text">

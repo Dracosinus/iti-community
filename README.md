@@ -149,7 +149,7 @@ Un utilisateur doit en amont avoir sélectionné une room pour pouvoir y poster 
 6. Afficher une image si le message contient une url vers une image ✅
 7. Afficher une video si le message contient une url vers une vidéo (https://www.html5rocks.com/en/tutorials/video/basics/devstories.mp4) ✅
 8. Afficher le player de youtube si le message contient un lien youtube ✅
-9. Implémenter le bouton like
+9. Implémenter le bouton like ✅
 
 ### Level II
 8. Utiliser [luxon](https://moment.github.io/luxon/docs/class/src/duration.js~Duration.html) pour formatter les date à l'aide d'un [Pipe Angular](https://angular.io/guide/pipes#creating-pipes-for-custom-data-transformations)
