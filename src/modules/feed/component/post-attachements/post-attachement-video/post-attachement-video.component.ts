@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MessageVideoElement } from '../../../post.model';
+import { DomSanitizer } from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-post-attachement-video',
@@ -10,9 +12,14 @@ export class PostAttachementVideoComponent implements OnInit {
   @Input()
   element: MessageVideoElement;
 
-  constructor() { }
+  constructor(
+    private sanitizer: DomSanitizer
+  ) { }
 
   ngOnInit(): void {
   }
 
+  get url() {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(this.element.url);
+  }
 }

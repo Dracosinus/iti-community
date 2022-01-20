@@ -146,7 +146,7 @@ Un utilisateur doit en amont avoir sélectionné une room pour pouvoir y poster 
 3. Afficher le nom de l'auteur des messages ✅
 4. Afficher la photo de l'auteur des messages ✅
 5. Afficher la date du post ✅
-6. Afficher une image si le message contient une url vers une image
+6. Afficher une image si le message contient une url vers une image ✅
 7. Afficher une video si le message contient une url vers une vidéo (https://www.html5rocks.com/en/tutorials/video/basics/devstories.mp4)
 8. Afficher le player de youtube si le message contient un lien youtube
 9. Implémenter le bouton like
