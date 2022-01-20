@@ -48,6 +48,10 @@ export class PostMapper {
     const youtubeMatche = youtubeRegex.exec(message)
     if (youtubeMatche) {
      // TODO ajouter un attachement de type youtube dans attachements
+     attachements.push({
+       type: 'youtube',
+       videoId: youtubeMatche[2]
+     })
     }
 
     return {
