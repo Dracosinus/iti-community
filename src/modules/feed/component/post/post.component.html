@@ -3,16 +3,12 @@
 
   <!-- TIPS: [ngStyle]="{'background-image': url(...) }" -->
   <div class="post-author-photo" [ngStyle]="{'background-image': 'url('+ post.createdBy.photoUrl +')'}" ></div>
-
-  <!-- [ngStyle]="{'background-image': url(http://pm1.narvii.com/7061/04f310ed5ad5318ea20b72e2c038396b98902cd6r1-360-573v2_00.jpg) }" -->
-  <!-- post.createdBy.photoUrl -->
-
   
   <div class="post-date">{{post.createdAt| date:'short'}}</div>
 
   <!-- TIPS: [ngClass]="{liked: [expression booléenne]}" -->
-  <div class="post-user-like">
-    <i nz-icon nzType="heart" [nzTheme]="post.liked ? 'fill' : 'outline'"></i>
+  <div class="post-user-like ">
+    <i nz-icon nzType="heart" [nzTheme]="post.liked? 'fill' : 'outline'" [ngClass]="{'liked': [post.liked]}" (click)="like()"></i>
   </div>
 
   <p class="post-text">
@@ -28,7 +24,6 @@
     <app-post-attachement-video *ngIf="element.type === 'video'" [element]="element"></app-post-attachement-video>
     <app-post-attachement-youtube *ngIf="element.type === 'youtube'" [element]="element"></app-post-attachement-youtube>
 
-     <!-- <img *ngIf="element === image" src='http://localhost:3000/file/messages/71fccbf5-4f84-471b-955f-aba98af3bec4_78559051-5eae-4db4-9b44-b27ccd9c2a16_1642607193887.jpg'/> -->
   </div>
   <div #anchor></div>
 </div>
