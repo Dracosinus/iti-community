@@ -1,0 +1,11 @@
+<div *ngFor="let notification of anyNotifications">
+  <div *ngIf="notification.subject === 'new_user'">
+    {{'Bienvenue '}}<b>{{notification.payload.user.username}}</b> !
+  </div>
+  <div *ngIf="notification.subject === 'room_added'">
+    {{'Nouveau salon' }}<b>{{notification.payload.room}}</b> {{' créé par '}} <b>{{notification.payload.user.username}}</b>
+  </div>
+  <div *ngIf="notification.subject === 'post_liked'">
+    <b>{{notification.payload.user.username}}</b>{{ 'a liké' }}<b>{{notification.payload.preview}}</b>
+  </div>
+</div>

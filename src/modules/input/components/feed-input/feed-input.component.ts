@@ -149,7 +149,6 @@ export class FeedInputComponent {
    */
   fireMessageSent() {
 
-    
     this.messageSent.emit({
       date: new Date(),
       message: this.message,
