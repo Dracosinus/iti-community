@@ -22,7 +22,7 @@ export class NotificationsComponent implements OnInit {
    }
 
   async ngOnInit() {
-    this.anyNotifications = (await this.notificationQueries.getNotifications()).sort(x => x.timestamp).reverse(); 
+    this.anyNotifications = (await this.notificationQueries.getNotifications()); 
     console.log(this.anyNotifications);
     this.notificationsSocketService.onNewNotification(notification => {
       this.anyNotifications.push(notification);    

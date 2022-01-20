@@ -1,4 +1,6 @@
-<div *ngFor="let notification of anyNotifications">
+<div *ngFor="let notification of anyNotifications" class="notifications">
+  <!-- <div class="notification-author-photo"></div> -->
+  <!-- [ngStyle]="{'background-image': 'url('+ notification.payload.user.photoUrl +')'}" --> -->
   <div *ngIf="notification.subject === 'new_user'">
     {{'Bienvenue '}}<b>{{notification.payload.user.username}}</b> !
   </div>
@@ -8,4 +10,5 @@
   <div *ngIf="notification.subject === 'post_liked'">
     <b>{{notification.payload.user.username}}</b>{{ 'a liké' }}<b>{{notification.payload.preview}}</b>
   </div>
+  <div class="date">à {{notification.timestamp | date:'short'}}</div>
 </div>
